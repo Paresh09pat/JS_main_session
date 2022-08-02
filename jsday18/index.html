@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+function showTime(){
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    var s = d.getSeconds();
+    var session = "AM";
+
+    if (h > 12) {
+        h = h - 12;
+    }
+
+    if (h <= 12){
+        session = "PM";
+    }
+
+    h = h < 10 ? "0"+h : h;
+    m = m < 10 ? "0"+m : m;
+    s = s < 10 ? "0"+s : s;
+
+
+    var time = h + ":" + m + ":" + s + " " + session ; 
+    document.getElementById('ff').innerText = time;
+    setTimeout(showTime,1000);
+}
+
+
+if (time > 6 && time < 12)
+    {
+        image = "images/morning.jpg";
+    }
+    else if (time > 12 && time < 17)
+    {
+        image = "images/day.jpg";
+    }
+    else if (time > 17 && time < 21)
+    {
+        image = "images/evening.jpg";
+    }
+    else if (time > 21 && time > 6){
+        image = "images/night.jpg";
+    }

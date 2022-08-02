@@ -1,0 +1,11 @@
+.text{
+    color: red;
+}
+
+#description{
+    color: yellowgreen;
+}
+
+button{
+    background-color: rgb(223, 191, 191);
+}
